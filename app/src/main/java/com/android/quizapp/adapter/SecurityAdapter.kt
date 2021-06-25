@@ -28,20 +28,24 @@ class SecurityAdapter(private val callback: SecurityItemCallback) : RecyclerView
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind() {
-            if(absoluteAdapterPosition==9){
-//                binding.root.setImageResource(R.drawable.ic_touch__id)
-            }else if (absoluteAdapterPosition==11){
-//                binding.root.setImageResource(R.drawable.ic_delete)
-            }
-            else if(absoluteAdapterPosition < 10){
-                binding.root.text = (absoluteAdapterPosition-1).toString()
-                binding.root.setOnClickListener {
-                    callback.onClickItem(absoluteAdapterPosition-1)
+            when {
+                absoluteAdapterPosition==9 -> {
+        //                binding.root.setImageResource(R.drawable.ic_touch__id)
                 }
-            }else if(absoluteAdapterPosition == 11){
-                binding.root.text = "0"
-                binding.root.setOnClickListener {
-                    callback.onClickItem(0)
+                absoluteAdapterPosition==11 -> {
+        //                binding.root.setImageResource(R.drawable.ic_delete)
+                }
+                absoluteAdapterPosition < 10 -> {
+                    binding.root.text = (absoluteAdapterPosition+1).toString()
+                    binding.root.setOnClickListener {
+                        callback.onClickItem(absoluteAdapterPosition+1)
+                    }
+                }
+                absoluteAdapterPosition == 10 -> {
+                    binding.root.text = "0"
+                    binding.root.setOnClickListener {
+                        callback.onClickItem(0)
+                    }
                 }
             }
 
