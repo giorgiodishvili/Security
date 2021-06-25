@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/passwordSecurityFragment">
+
+
+    <fragment
+        android:id="@+id/passwordSecurityFragment"
+        android:name="com.android.quizapp.ui.passwordsecurity.PasswordSecurityFragment"
+        android:label="password_security_fragment"
+        tools:layout="@layout/password_security_fragment" />
+</navigation>
