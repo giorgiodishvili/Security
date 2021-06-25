@@ -24,10 +24,10 @@ class PasswordSecurityFragment : BaseFragment<PasswordSecurityFragmentBinding>(P
                 inputPass += absoluteAdapterPosition.toString()
                 val length = inputPass.length
                 when(length){
-                    0 -> binding.dot1.background = (R.drawable.roundall_green.toDrawable())
                     1 -> binding.dot1.background = (R.drawable.roundall_green.toDrawable())
-                    2 -> binding.dot1.background = (R.drawable.roundall_green.toDrawable())
-                    3 -> binding.dot1.background = (R.drawable.roundall_green.toDrawable())
+                    2 -> binding.dot2.background = (R.drawable.roundall_green.toDrawable())
+                    3 -> binding.dot3.background = (R.drawable.roundall_green.toDrawable())
+                    4 -> binding.dot4.background = (R.drawable.roundall_green.toDrawable())
                 }
 
                 if(length == 4){
@@ -47,9 +47,9 @@ class PasswordSecurityFragment : BaseFragment<PasswordSecurityFragmentBinding>(P
                     }
                     inputPass=""
                     binding.dot1.background = (R.drawable.roundall.toDrawable())
-                    binding.dot1.background = (R.drawable.roundall.toDrawable())
-                    binding.dot1.background = (R.drawable.roundall.toDrawable())
-                    binding.dot1.background = (R.drawable.roundall.toDrawable())
+                    binding.dot2.background = (R.drawable.roundall.toDrawable())
+                    binding.dot3.background = (R.drawable.roundall.toDrawable())
+                    binding.dot4.background = (R.drawable.roundall.toDrawable())
                 }
             }
         })
